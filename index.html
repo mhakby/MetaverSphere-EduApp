@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metaversphere</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!--Google Fonts'dan seçilen yazı tipinin linki head'e yazılır.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,800;1,400;1,500;1,800&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+
+  <!--Navbar bootstrap docs'dan alındı-->
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top"> <!--bg-dark'a çevrilince yazılar da siyah olduğundan uyumsuzluk oluştu. Bu durumu
+    engellemek için navbar-dark'ı da koda eklersek yazı tipi de beyaza dönüşüp daha güzel görünecektir.(Bu özellik bootstrap'a işlenmiştir. Dark'da yazı beyazdır.) 
+    Py-3 ile y ekseninde 3 birim aşağı kaydırma yaptık. fixed-top diyerek ise bu navbarı tüm koşullar için yukarı sabitledik.-->
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="Sphere.png" width="180" height="48" class="d-inline-block align-top" alt="Logo"> <!--navbar brand içerisine img etiketi ile logo gömdüm.-->
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav"> <!--data-bs-target ile id kısmının aynı adı taşıması gerekir.-->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Questions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Teachers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Do practice</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav> 
+      <section class="bg-dark text-light p-5 pt-lg-0 pt-lg-5 text-center text-sm-start"> <!--section.bg-dark.text-light.p-5.p-lg-0.pt-lg-5.text-center.text-sm-start yazıp enter'a basarak bu özelliklerde bir section elde edebiliriz. bg:background, text-light: yazı rengi beyaz, p-5 : padding 5, p-lg-0: padding large 0, pt-lg-5: padding top large'da 3 rem, text-sm-start: text small ekranda start olsun(?)-->
+        <div class="container"><!--içerikler container class içerisine yazılır.-->
+          <div class="d-sm-flex align-items-center justify-content-between"> <!--.d-sm-flex.align-items-center.justify-content-between kodu ile getirildi.-->
+            <div>
+              <h1>Do you want to learn <span class="text-warning">coding?</span></h1> <!-- span ile vurgu yapıldı.-->
+              <!--p.lead.my-4 kodu ile çağırıldı.Lead bir font size ve ağırlık veriyor. bootstrap.css'ten aratıp kontrol edebilirsin.-->
+              <p class="lead my-4">Introducing our innovative teaching software, designed to revolutionize the learning experience. Our software combines cutting-edge technology with pedagogical expertise to create an engaging and effective educational platform. With interactive lessons, customizable content, and real-time feedback, students can actively participate in their own learning journey. Our software enables teachers to easily design and deliver dynamic lessons, tailored to meet the unique needs of each student. Whether in a traditional classroom or remote setting, our teaching software empowers educators to foster creativity, critical thinking, and collaboration among their students. Join us in embracing the future of education with our intuitive and powerful teaching software. Together, let's unlock the full potential of every learner.</p>
+              <button class="btn btn-primary d-grid gap-2 col-3 mx-auto" data-bs-toggle="modal" data-bs-target="#enroll">Join Us</button><!--button.btn.btn-primary.btn-lg.mb-3 kodu ile çağırıldı. Ben düzenledim/butonu ortaladım. data-bs-toggle:"modal" kodunu bir butona tıkladığımızda bir form sayfası çıkarmak için kullanırız. data-bs-target="#enroll" kodu ise modal kodunun hedefinin ne olacağını gösterir. #enroll tanımlaması sonraki kodda yapılacak.-->
+            </div>
+            <img src="/Images/Coding.jpg" alt="" class="img-fluid w-50 d-none d-md-block" style="border-radius: 15px; box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);"> <!-- d-sm-block ekran responsive yapıda olduğundan small yani phone moduna geçtiğinde fotoğraf görünmeyecek.-->
+          </div>
+        </div>
+      </section>
+     <!-- Eğitim içeriklerini içerek olan kart alanları-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-3" style="max-width: 540px; padding: 5px; margin: 10px; background-color: rgb(207, 225, 252);">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="Images/html-5.png" class="img-fluid rounded-start d-none d-md-block " style="border-radius: 15px; box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">HTML-5</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <button class="btn btn-primary btn-md"> Read more </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-3" style="max-width: 540px; padding: 5px; margin: 10px; background-color: rgb(207, 225, 252);">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="Images/CSS.png" class="img-fluid w-100 d-none d-md-block" style="border-radius: 15px; box-shadow: 0 0 7px rgba(0, 0, 0, 0.5)"; alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">CSS</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <button class="btn btn-primary btn-md"> Read more </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-3" style="max-width: 540px; padding: 5px; margin: 10px; background-color: rgb(207, 225, 252);">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="Images/Javascript.png" class="img-fluid w-100 d-none d-md-block" style="border-radius: 15px; box-shadow: 0 0 7px rgba(0, 0, 0, 0.5)"; alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Java Script</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <button class="btn btn-primary btn-md"> Read more </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  <!-- Enroll modal. Butonlara hiç ihtiyaç yok hepsini sildim çünkü zaten yukarıda bağlamamız gereken bir butonumuz var.-->
+
+<div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-light"> <!--bg-dark diyerek backgroundu dark, text-light diyerek de yazıyı beyaz yaptım.-->
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Join Us</h1>
+        <button type="button" class="btn btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button> <!-- class'a btn ve btn-light ekleyip biraz değiştirdim.-->
+      </div>
+      <div class="modal-body">
+        <p class="lead">Please enter your information to register.</p>
+        <form>
+          <div class="mb-3">
+            <label for="First-name" class="col-form-label">First Name:</label>
+            <input type="text" class="form-control" id="First-name" required> <!-- required etiketi ile bu alanın doldurulmasını zorunlu kıldık-->
+          </div>
+          <div class="mb-3">
+            <label for="Last-name" class="col-form-label">Last Name:</label>
+            <input type="text" class="form-control" id="Last-name" required>
+          </div>
+          <div class="mb-3">
+            <label for="mail-name" class="col-form-label">E-mail:</label>
+            <input type="email" class="form-control" id="mail-name" required>
+          </div>
+          <div class="mb-3">
+            <label for="Password" class="col-form-label">Password:</label>
+            <input type="password" class="form-control" id="Password" required></input> <!--input yerine textarea kullanırsak düzenlenebilir metin kutusu oluşuyor. Bunu mesajlarda isteriz ama password kısımlarında istemeyiz.-->
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- İntroducing -->
+<section class="p-5">
+  <div class="container">
+    <div class="row-align-items-center justify-content-between">
+      <div class="col-md">
+        <img src="Images/based.png" alt="">
+      </div>
+      <div class="col-md p-5">
+        <h2>Learn the basics </h2>
+        <p>Introducing our innovative teaching software, designed to revolutionize the learning experience. Our software combines cutting-edge technology with pedagogical expertise to create an engaging and effective educational platform. With interactive lessons, customizable content, and real-time feedback, students can actively participate in their own learning journey.</p>
+        <p> Our software enables teachers to easily design and deliver dynamic lessons, tailored to meet the unique needs of each student.</p>
+        <a href="#" class="btn btn-light mt-3">
+          <i class="bi bi-chevron-right">Read more..</i> 
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- E-mail Subscribe alanı -->
+<section class="bg-primary text-light p-5">
+  <div class="container">
+    <div>
+      <h3 class="mb-3">Subscribe to our newsletter</h3>
+      <div class="input-group"> <!--İnput group'u biraz daha araştır-->
+        <input type="text" class="form-control" placeholder="E-mail"> <!-- Class'ı neden form-control yaptık daha başka ne olabilirdi ona bak. Placeholder yazı yazmadan önce input alanında ne yazılmasını istediğimiz ile ilgili-->
+        <button class="btn btn-dark btn-lg">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</section>
+      
+</body>
+</html>

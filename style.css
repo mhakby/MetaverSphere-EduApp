@@ -1,0 +1,5 @@
+body::before{ /* Bu komut satırı Do you want to learn coding? kısmı ile başlayan yazının navbar'ın altına gelmesini sağladı. Bu kısmı top'tan 90px boşluk bırakarak yaptık böylece bu kısım navbar'ın altında kalmaktan kurtuldu. contentboş kalmalı çünkü oraya yazacağımız şey ekrana yansır bizim amacımız sadece boşluğu sağlamak. Eğer content vermezsek height kodu çalışmayacak. Display kodunun neden kullanıldığına bak. */
+    display: block;
+    content: '';
+    height: 90px;
+}
